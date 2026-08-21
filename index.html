@@ -20,80 +20,77 @@
     </head>
     <body>
 
-        <div class="container-header" id="0-section">
+        <header class="container-header" id="0-section">
 
             <nav>
-                <div class="navbar-brand">
-                    <img src="https://img.icons8.com/color/48/000000/whale.png" height="54" alt="logo"/>
-                </div>
+                <a class="navbar-brand" href="#0-section">
+                    <img src="https://img.icons8.com/color/48/000000/whale.png" height="54" alt="Logo"/>
+                </a>
                 <div class="navbar-menu">
                     <div id="burguer-container">
-                        <span onclick="openMenu()" class="burguer-menu">
+                        <button type="button" class="burguer-menu" aria-label="Abrir menú" onclick="openMenu()">
                           <i class="fas fa-bars"></i>
-                        </span>
+                        </button>
                     </div>
 
                     <div id="menu-options">
                         <ul>
                             <li>
-                                <a id="0" onclick="goToSection(this)">Inicio</a>
+                                <a href="#0-section" onclick="goToSection(event, this)">Inicio</a>
                             </li>
                             <li>
-                                <a id="1" onclick="goToSection(this)">Sobre mí</a>
+                                <a href="#1-section" onclick="goToSection(event, this)">Sobre mí</a>
                             </li>
                             <li>
-                                <a id="2" onclick="goToSection(this)">Habilidades</a>
+                                <a href="#2-section" onclick="goToSection(event, this)">Habilidades</a>
                             </li>
                             <li>
-                                <a id="3" onclick="goToSection(this)">Educación</a>
+                                <a href="#3-section" onclick="goToSection(event, this)">Educación</a>
                             </li>
                             <li>
-                                <a id="4" onclick="goToSection(this)">Proyectos</a>
+                                <a href="#4-section" onclick="goToSection(event, this)">Proyectos</a>
                             </li>
                             <li>
-                                <a id="5" onclick="goToSection(this)">Contacto</a>
+                                <a href="#5-section" onclick="goToSection(event, this)">Contacto</a>
                             </li>
                         </ul>
                     </div>
                 </div>
             </nav>
 
-            <div data-aos="fade-up" class="text-header">
+            <div class="hero">
                 <div class="text-title">
                     <h1>Hola, Soy José Alejandro!</h1>
                     <p>Tecnólogo en Análisis y Desarrollo de Software</p>
-                    <a id="1" onclick="goToSection(this)" class="btn">Conóceme</a>
+                    <a class="btn" href="#1-section" onclick="goToSection(event, this)">Conóceme</a>
                 </div>
             </div>
 
-        </div>
+        </header>
 
-        <section class="about-me" id="1-section">
-            <div data-aos="fade-up" class="profile-container">
-                <div class="profile-photo">
+        <main>
+
+            <section class="about-me" id="1-section">
+                <figure class="profile-photo">
                     <img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png" alt="Foto de perfil de José Alejandro Pérez Pabón" width="250" height="250">
-                </div>
-                <h3 data-aos="fade-up">Acerca de mí</h3>
+                </figure>
+                <h2 data-aos="fade-up">Acerca de mí</h2>
                 <p data-aos="fade-up">
                     Mi nombre es <strong>José Alejandro Pérez Pabón</strong> y soy <strong>Tecnólogo en Análisis y Desarrollo de Software</strong> formado en el SENA (ADSO) en Bucaramanga. Me apasiona construir soluciones web funcionales y seguir aprendiendo nuevas tecnologías. He desarrollado con <strong>HTML semántico, CSS3, JavaScript, PHP, SQL y Python</strong>, y cuento con principios de <strong>React</strong> para el desarrollo de interfaces modernas.
                 </p>
-                <img data-aos="fade-up" src="https://img.icons8.com/color/200/000000/source-code.png" alt="Código fuente">
-            </div>
-        </section>
+                <img data-aos="fade-up" src="https://img.icons8.com/color/200/000000/source-code.png" alt="" aria-hidden="true">
+            </section>
 
-        <div class="separator"></div>
-
-        <section class="skills" id="2-section">
-            <div class="skills-container">
-                <h3 data-aos="fade-up">Habilidades</h3>
+            <section class="skills" id="2-section">
+                <h2 data-aos="fade-up">Habilidades</h2>
                 <p data-aos="fade-up">
                     En esta sección encontrarás mis <strong>habilidades</strong>, tanto personales como técnicas, que aplico en cada proyecto y que hacen de mí un profesional comprometido.
                 </p>
                 <div data-aos="fade-up" class="row skills-card">
                     <div data-aos="fade-up" class="column col-6 column-separator">
-                        <h4>
+                        <h3>
                             Personales
-                        </h4>
+                        </h3>
                         <p>
                             Estas son mis <strong>características personales</strong>, que complementan mi perfil técnico.
                         </p>
@@ -113,9 +110,9 @@
                         </ul>
                     </div>
                     <div data-aos="fade-up" class="column col-6">
-                        <h4>
+                        <h3>
                             Técnicas
-                        </h4>
+                        </h3>
                         <p>
                             Estas son mis <strong>herramientas y tecnologías</strong>, que fortalezco constantemente.
                         </p>
@@ -134,25 +131,21 @@
                         </ul>
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
 
-        <div class="separator" style="margin-top: 50px"></div>
-
-        <section class="education" id="3-section">
-            <div class="education-container">
-                <h3 data-aos="fade-up">Educación</h3>
+            <section class="education" id="3-section">
+                <h2 data-aos="fade-up">Educación</h2>
                 <p data-aos="fade-up">
                     Mi formación académica y certificaciones que respaldan mi perfil profesional.
                 </p>
-                <div data-aos="fade-up" class="edu-card">
-                    <h4>Formación principal</h4>
+                <article data-aos="fade-up" class="edu-card">
+                    <h3>Formación principal</h3>
                     <ul>
                         <li>
                             <strong>Tecnólogo en Análisis y Desarrollo de Software (ADSO)</strong> — SENA, Bucaramanga.
                         </li>
                     </ul>
-                    <h4>Certificaciones y diplomados</h4>
+                    <h3>Certificaciones y diplomados</h3>
                     <ul>
                         <li>
                             Diplomado en Innovación en Tecnologías 4.0 — Universidad Nacional de Colombia (Unlab).
@@ -164,131 +157,122 @@
                             Curso de emprendimiento.
                         </li>
                     </ul>
-                </div>
-            </div>
-        </section>
+                </article>
+            </section>
 
-        <div class="separator" style="margin-top: 50px"></div>
-
-        <section class="jobs" id="4-section">
-            <div class="jobs-container">
-                <h3 data-aos="fade-up">Mis proyectos</h3>
+            <section class="projects" id="4-section">
+                <h2 data-aos="fade-up">Mis proyectos</h2>
                 <p data-aos="fade-up">
                     Mira algunos de mis trabajos, desarrollados con distintas tecnologías web.
                 </p>
-                <div>
-                    <div data-aos="fade-up" class="row">
+                <div data-aos="fade-up" class="row">
 
-                        <div class="column col-4">
+                    <article class="column col-4">
 
-                            <div class="card-job">
+                        <article class="card-job">
 
-                                <div class="card-img-job">
-                                    <img src="https://images.unsplash.com/photo-1511578194003-00c80e42dc9b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80" alt="Vlover - catálogo de joyería">
-                                </div>
-                                <div data-aos="fade-up" class="card-body">
-                                    <h4>Vlover</h4>
-                                    <p>
-                                        Catálogo de joyería (HTML5 - CSS3 - JavaScript)
-                                    </p>
-                                    <a href="#" class="card-btn">Conocer</a>
-                                </div>
-
+                            <figure class="card-img-job">
+                                <img src="https://images.unsplash.com/photo-1511578194003-00c80e42dc9b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80" alt="Vlover - catálogo de joyería">
+                            </figure>
+                            <div data-aos="fade-up" class="card-body">
+                                <h3>Vlover</h3>
+                                <p>
+                                    Catálogo de joyería (HTML5 - CSS3 - JavaScript)
+                                </p>
+                                <a href="#" class="card-btn">Conocer</a>
                             </div>
 
-                        </div>
+                        </article>
 
-                        <div class="column col-4">
+                    </article>
 
-                            <div class="card-job">
+                    <article class="column col-4">
 
-                                <div class="card-img-job">
-                                    <img src="https://images.unsplash.com/photo-1484330191673-3354ce741b46?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80" alt="TransferPlayer - gestión de traspasos futbolísticos">
-                                </div>
-                                <div data-aos="fade-up" class="card-body">
-                                    <h4>TransferPlayer</h4>
-                                    <p>
-                                        Prototipo de gestión de traspasos futbolísticos
-                                    </p>
-                                    <a href="#" class="card-btn">Conocer</a>
-                                </div>
+                        <article class="card-job">
 
+                            <figure class="card-img-job">
+                                <img src="https://images.unsplash.com/photo-1484330191673-3354ce741b46?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80" alt="TransferPlayer - gestión de traspasos futbolísticos">
+                            </figure>
+                            <div data-aos="fade-up" class="card-body">
+                                <h3>TransferPlayer</h3>
+                                <p>
+                                    Prototipo de gestión de traspasos futbolísticos
+                                </p>
+                                <a href="#" class="card-btn">Conocer</a>
                             </div>
 
-                        </div>
+                        </article>
 
-                        <div class="column col-4">
+                    </article>
 
-                            <div class="card-job">
+                    <article class="column col-4">
 
-                                <div class="card-img-job">
-                                    <img src="https://images.unsplash.com/photo-1489875347897-49f64b51c1f8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80" alt="Senda Explorer - turismo">
-                                </div>
-                                <div data-aos="fade-up" class="card-body">
-                                    <h4>Senda Explorer</h4>
-                                    <p>
-                                        Landing de divulgación de turismo
-                                    </p>
-                                    <a href="#" class="card-btn">Conocer</a>
-                                </div>
+                        <article class="card-job">
 
+                            <figure class="card-img-job">
+                                <img src="https://images.unsplash.com/photo-1489875347897-49f64b51c1f8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80" alt="Senda Explorer - turismo">
+                            </figure>
+                            <div data-aos="fade-up" class="card-body">
+                                <h3>Senda Explorer</h3>
+                                <p>
+                                    Landing de divulgación de turismo
+                                </p>
+                                <a href="#" class="card-btn">Conocer</a>
                             </div>
 
-                        </div>
+                        </article>
 
-                    </div>
+                    </article>
+
                 </div>
-            </div>
-        </section>
+            </section>
+
+        </main>
 
         <section class="contact-me" id="5-section">
-            <div class="contact-me-p">
-                <div class="card-contact-me">
+            <div class="card-contact-me">
 
-                    <div data-aos="fade-up" class="row">
-                        <div class="column col-6">
-                            <p class="card-start-proyect mg-bt">
-                                ¡Iniciemos un proyecto!
-                            </p>
-                            <a class="card-contact-btn" href="mailto:josealejandroperezpabon24@gmail.com">Contáctame</a>
-                        </div>
-                        <div class="column col-6">
-                            <p class="card-start-proyect-1">
-                                ¿Interesado en trabajar conmigo? Un café y una buena charla pueden dar inicio a un gran proyecto.
-                            </p>
-                        </div>
+                <div data-aos="fade-up" class="row">
+                    <div class="column col-6">
+                        <p class="card-start-proyect mg-bt">
+                            ¡Iniciemos un proyecto!
+                        </p>
+                        <a class="card-contact-btn" href="mailto:josealejandroperezpabon24@gmail.com">Contáctame</a>
                     </div>
-
+                    <div class="column col-6">
+                        <p class="card-start-proyect-1">
+                            ¿Interesado en trabajar conmigo? Un café y una buena charla pueden dar inicio a un gran proyecto.
+                        </p>
+                    </div>
                 </div>
+
             </div>
 
             <div data-aos="fade-up" class="social-networks-container">
-                <div class="network-icons">
-                    <ul class="list-networks">
-                        <li class="icon">
-                            <a class="github" href="https://github.com/alejoxpp" target="_blank" rel="noopener">
-                                <i class="fab fa-github"></i>
-                            </a>
-                        </li>
-                        <li class="icon">
-                            <a class="instagram" href="https://instagram.com/4lejo_zxz" target="_blank" rel="noopener">
-                                <i class="fab fa-instagram"></i>
-                            </a>
-                        </li>
-                        <li class="icon">
-                            <a class="whatsapp" href="https://wa.me/573162349322" target="_blank" rel="noopener">
-                                <i class="fab fa-whatsapp"></i>
-                            </a>
-                        </li>
-                        <li class="icon">
-                            <a class="email" href="mailto:josealejandroperezpabon24@gmail.com">
-                                <i class="fas fa-envelope"></i>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
+                <ul class="list-networks">
+                    <li class="icon">
+                        <a class="github" href="https://github.com/alejoxpp" target="_blank" rel="noopener">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </li>
+                    <li class="icon">
+                        <a class="instagram" href="https://instagram.com/4lejo_zxz" target="_blank" rel="noopener">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </li>
+                    <li class="icon">
+                        <a class="whatsapp" href="https://wa.me/573162349322" target="_blank" rel="noopener">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                    </li>
+                    <li class="icon">
+                        <a class="email" href="mailto:josealejandroperezpabon24@gmail.com">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                    </li>
+                </ul>
 
-                <div class="credits">
+                <footer class="credits">
                     <p>
                         <script type="text/javascript">
                             copyright=new Date();
@@ -296,7 +280,7 @@
                             document.write("Sitio Hecho a Mano - © "+update);
                         </script>
                     </p>
-                </div>
+                </footer>
             </div>
         </section>
 

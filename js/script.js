@@ -1,6 +1,9 @@
-function goToSection(section){
-	const scroll = section.id+"-section";
-	document.getElementById(scroll).scrollIntoView(true);
+function goToSection(event, el) {
+	event.preventDefault();
+	const target = document.querySelector(el.getAttribute('href'));
+	if (target) {
+		target.scrollIntoView({ behavior: 'smooth' });
+	}
 }
 
 function openMenu() {
