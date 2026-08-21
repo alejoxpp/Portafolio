@@ -4,6 +4,16 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>José Alejandro Pérez Pabón | Portafolio</title>
+        <meta name="description" content="Portafolio de José Alejandro Pérez Pabón, Tecnólogo en Análisis y Desarrollo de Software (ADSO - SENA Bucaramanga). Proyectos, habilidades y formación.">
+
+        <!-- Open Graph -->
+        <meta property="og:title" content="José Alejandro Pérez Pabón | Portafolio">
+        <meta property="og:description" content="Tecnólogo en Análisis y Desarrollo de Software - ADSO SENA Bucaramanga.">
+        <meta property="og:type" content="website">
+        <meta property="og:image" content="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png">
+
+        <!-- Favicon -->
+        <link rel="icon" href="https://img.icons8.com/color/48/000000/whale.png">
 
         <!-- Fuente Squada One -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -26,9 +36,12 @@
                 <a class="navbar-brand" href="#0-section">
                     <img src="https://img.icons8.com/color/48/000000/whale.png" height="54" alt="Logo"/>
                 </a>
+                <button type="button" class="theme-toggle" id="themeToggle" aria-label="Cambiar tema" onclick="toggleTheme()">
+                    <i class="fas fa-moon"></i>
+                </button>
                 <div class="navbar-menu">
                     <div id="burguer-container">
-                        <button type="button" class="burguer-menu" aria-label="Abrir menú" onclick="openMenu()">
+                        <button type="button" class="burguer-menu" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu-options" onclick="openMenu()">
                           <i class="fas fa-bars"></i>
                         </button>
                     </div>
@@ -72,13 +85,14 @@
 
             <section class="about-me" id="1-section">
                 <figure class="profile-photo">
-                    <img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png" alt="Foto de perfil de José Alejandro Pérez Pabón" width="250" height="250">
+                    <img src="assets/profile.jpg" alt="Foto de perfil de José Alejandro Pérez Pabón"
+                         onerror="this.onerror=null;this.src='https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png';">
                 </figure>
                 <h2 data-aos="fade-up">Acerca de mí</h2>
                 <p data-aos="fade-up">
                     Mi nombre es <strong>José Alejandro Pérez Pabón</strong> y soy <strong>Tecnólogo en Análisis y Desarrollo de Software</strong> formado en el SENA (ADSO) en Bucaramanga. Me apasiona construir soluciones web funcionales y seguir aprendiendo nuevas tecnologías. He desarrollado con <strong>HTML semántico, CSS3, JavaScript, PHP, SQL y Python</strong>, y cuento con principios de <strong>React</strong> para el desarrollo de interfaces modernas.
                 </p>
-                <img data-aos="fade-up" src="https://img.icons8.com/color/200/000000/source-code.png" alt="" aria-hidden="true">
+                <img data-aos="fade-up" src="https://img.icons8.com/color/200/000000/source-code.png" alt="" aria-hidden="true" loading="lazy">
             </section>
 
             <section class="skills" id="2-section">
@@ -116,19 +130,36 @@
                         <p>
                             Estas son mis <strong>herramientas y tecnologías</strong>, que fortalezco constantemente.
                         </p>
-                        <ul data-aos="fade-up" class="tech-icons">
-                            <li>
-                                <img src="https://img.icons8.com/color/96/000000/html-5.png" alt="HTML5">
-                                <img src="https://img.icons8.com/color/96/000000/css3.png" alt="CSS3">
-                                <img src="https://img.icons8.com/color/96/000000/javascript.png" alt="JavaScript">
-                            </li>
-                            <li>
-                                <img src="https://img.icons8.com/color/96/000000/php.png" alt="PHP">
-                                <img src="https://img.icons8.com/color/96/000000/sql.png" alt="SQL">
-                                <img src="https://img.icons8.com/color/96/000000/python.png" alt="Python">
-                                <img src="https://img.icons8.com/color/96/000000/react-native.png" alt="React">
-                            </li>
-                        </ul>
+                        <div class="skill-bars">
+                            <div class="skill">
+                                <span class="skill-name">HTML semántico</span>
+                                <div class="bar"><div class="bar-fill" style="width:90%"></div></div>
+                            </div>
+                            <div class="skill">
+                                <span class="skill-name">CSS3</span>
+                                <div class="bar"><div class="bar-fill" style="width:85%"></div></div>
+                            </div>
+                            <div class="skill">
+                                <span class="skill-name">JavaScript</span>
+                                <div class="bar"><div class="bar-fill" style="width:80%"></div></div>
+                            </div>
+                            <div class="skill">
+                                <span class="skill-name">PHP</span>
+                                <div class="bar"><div class="bar-fill" style="width:70%"></div></div>
+                            </div>
+                            <div class="skill">
+                                <span class="skill-name">SQL</span>
+                                <div class="bar"><div class="bar-fill" style="width:75%"></div></div>
+                            </div>
+                            <div class="skill">
+                                <span class="skill-name">Python</span>
+                                <div class="bar"><div class="bar-fill" style="width:70%"></div></div>
+                            </div>
+                            <div class="skill">
+                                <span class="skill-name">React (principios)</span>
+                                <div class="bar"><div class="bar-fill" style="width:60%"></div></div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -172,14 +203,19 @@
                         <article class="card-job">
 
                             <figure class="card-img-job">
-                                <img src="https://images.unsplash.com/photo-1511578194003-00c80e42dc9b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80" alt="Vlover - catálogo de joyería">
+                                <span class="badge">En desarrollo</span>
+                                <img src="assets/vlover.jpg" loading="lazy" alt="Vlover - catálogo de joyería"
+                                     onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1511578194003-00c80e42dc9b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80';">
                             </figure>
                             <div data-aos="fade-up" class="card-body">
                                 <h3>Vlover</h3>
-                                <p>
-                                    Catálogo de joyería (HTML5 - CSS3 - JavaScript)
-                                </p>
-                                <a href="#" class="card-btn">Conocer</a>
+                                <p>Catálogo de joyería</p>
+                                <ul class="tech-tags">
+                                    <li>HTML5</li>
+                                    <li>CSS3</li>
+                                    <li>JavaScript</li>
+                                </ul>
+                                <a href="#" class="card-btn">Ver proyecto</a>
                             </div>
 
                         </article>
@@ -191,14 +227,18 @@
                         <article class="card-job">
 
                             <figure class="card-img-job">
-                                <img src="https://images.unsplash.com/photo-1484330191673-3354ce741b46?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80" alt="TransferPlayer - gestión de traspasos futbolísticos">
+                                <span class="badge">En desarrollo</span>
+                                <img src="assets/transferplayer.jpg" loading="lazy" alt="TransferPlayer - gestión de traspasos futbolísticos"
+                                     onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1484330191673-3354ce741b46?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80';">
                             </figure>
                             <div data-aos="fade-up" class="card-body">
                                 <h3>TransferPlayer</h3>
-                                <p>
-                                    Prototipo de gestión de traspasos futbolísticos
-                                </p>
-                                <a href="#" class="card-btn">Conocer</a>
+                                <p>Prototipo de gestión de traspasos futbolísticos</p>
+                                <ul class="tech-tags">
+                                    <li>Prototipo</li>
+                                    <li>Gestión</li>
+                                </ul>
+                                <a href="#" class="card-btn">Ver proyecto</a>
                             </div>
 
                         </article>
@@ -210,14 +250,18 @@
                         <article class="card-job">
 
                             <figure class="card-img-job">
-                                <img src="https://images.unsplash.com/photo-1489875347897-49f64b51c1f8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80" alt="Senda Explorer - turismo">
+                                <span class="badge">En desarrollo</span>
+                                <img src="assets/senda-explorer.jpg" loading="lazy" alt="Senda Explorer - turismo"
+                                     onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1489875347897-49f64b51c1f8?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80';">
                             </figure>
                             <div data-aos="fade-up" class="card-body">
                                 <h3>Senda Explorer</h3>
-                                <p>
-                                    Landing de divulgación de turismo
-                                </p>
-                                <a href="#" class="card-btn">Conocer</a>
+                                <p>Landing de divulgación de turismo</p>
+                                <ul class="tech-tags">
+                                    <li>Landing</li>
+                                    <li>Turismo</li>
+                                </ul>
+                                <a href="#" class="card-btn">Ver proyecto</a>
                             </div>
 
                         </article>
@@ -227,62 +271,70 @@
                 </div>
             </section>
 
-        </main>
+            <section class="contact-me" id="5-section">
+                <div class="card-contact-me">
 
-        <section class="contact-me" id="5-section">
-            <div class="card-contact-me">
+                    <div data-aos="fade-up" class="row">
+                        <div class="column col-6">
+                            <p class="card-start-proyect mg-bt">
+                                ¡Iniciemos un proyecto!
+                            </p>
+                            <p class="card-start-proyect-1">
+                                ¿Interesado en trabajar conmigo? Un café y una buena charla pueden dar inicio a un gran proyecto.
+                            </p>
+                        </div>
+                        <div class="column col-6">
+                            <form id="contactForm" class="contact-form">
+                                <label for="name">Nombre</label>
+                                <input id="name" name="name" type="text" required>
+                                <label for="email">Email</label>
+                                <input id="email" name="email" type="email" required>
+                                <label for="message">Mensaje</label>
+                                <textarea id="message" name="message" rows="4" required></textarea>
+                                <button type="submit" class="card-contact-btn">Enviar mensaje</button>
+                            </form>
+                        </div>
+                    </div>
 
-                <div data-aos="fade-up" class="row">
-                    <div class="column col-6">
-                        <p class="card-start-proyect mg-bt">
-                            ¡Iniciemos un proyecto!
-                        </p>
-                        <a class="card-contact-btn" href="mailto:josealejandroperezpabon24@gmail.com">Contáctame</a>
-                    </div>
-                    <div class="column col-6">
-                        <p class="card-start-proyect-1">
-                            ¿Interesado en trabajar conmigo? Un café y una buena charla pueden dar inicio a un gran proyecto.
-                        </p>
-                    </div>
                 </div>
 
-            </div>
+                <div data-aos="fade-up" class="social-networks-container">
+                    <ul class="list-networks">
+                        <li class="icon">
+                            <a class="github" href="https://github.com/alejoxpp" target="_blank" rel="noopener">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </li>
+                        <li class="icon">
+                            <a class="instagram" href="https://instagram.com/4lejo_zxz" target="_blank" rel="noopener">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                        </li>
+                        <li class="icon">
+                            <a class="whatsapp" href="https://wa.me/573162349322" target="_blank" rel="noopener">
+                                <i class="fab fa-whatsapp"></i>
+                            </a>
+                        </li>
+                        <li class="icon">
+                            <a class="email" href="mailto:josealejandroperezpabon24@gmail.com">
+                                <i class="fas fa-envelope"></i>
+                            </a>
+                        </li>
+                    </ul>
 
-            <div data-aos="fade-up" class="social-networks-container">
-                <ul class="list-networks">
-                    <li class="icon">
-                        <a class="github" href="https://github.com/alejoxpp" target="_blank" rel="noopener">
-                            <i class="fab fa-github"></i>
-                        </a>
-                    </li>
-                    <li class="icon">
-                        <a class="instagram" href="https://instagram.com/4lejo_zxz" target="_blank" rel="noopener">
-                            <i class="fab fa-instagram"></i>
-                        </a>
-                    </li>
-                    <li class="icon">
-                        <a class="whatsapp" href="https://wa.me/573162349322" target="_blank" rel="noopener">
-                            <i class="fab fa-whatsapp"></i>
-                        </a>
-                    </li>
-                    <li class="icon">
-                        <a class="email" href="mailto:josealejandroperezpabon24@gmail.com">
-                            <i class="fas fa-envelope"></i>
-                        </a>
-                    </li>
-                </ul>
+                    <footer class="credits">
+                        <p>
+                            Sitio Hecho a Mano - © <span id="year"></span>
+                        </p>
+                    </footer>
+                </div>
+            </section>
 
-                <footer class="credits">
-                    <p>
-                        <script type="text/javascript">
-                            copyright=new Date();
-                            update=copyright.getFullYear();
-                            document.write("Sitio Hecho a Mano - © "+update);
-                        </script>
-                    </p>
-                </footer>
-            </div>
-        </section>
+        </main>
+
+        <button type="button" id="toTop" class="to-top" aria-label="Volver arriba" title="Volver arriba">
+            <i class="fas fa-arrow-up"></i>
+        </button>
 
         <!-- AOS JS -->
         <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
