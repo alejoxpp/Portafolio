@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>José Alejandro Pérez Pabón | Portafolio</title>
+
+        <!-- Fuente Squada One -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Squada+One&display=swap" rel="stylesheet">
+
+        <!-- Font Awesome (iconos) -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+        <!-- AOS (animaciones) -->
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+        <link rel="stylesheet" href="css/styles.css">
+    </head>
+    <body>
+
+        <div class="container-header" id="0-section">
+
+            <nav>
+                <div class="navbar-brand">
+                    <img src="https://img.icons8.com/color/48/000000/whale.png" height="54" alt="logo"/>
+                </div>
+                <div class="navbar-menu">
+                    <div id="burguer-container">
+                        <span onclick="openMenu()" class="burguer-menu">
+                          <i class="fas fa-bars"></i>
+                        </span>
+                    </div>
+
+                    <div id="menu-options">
+                        <ul>
+                            <li>
+                                <a id="0" onclick="goToSection(this)">Inicio</a>
+                            </li>
+                            <li>
+                                <a id="1" onclick="goToSection(this)">Sobre mí</a>
+                            </li>
+                            <li>
+                                <a id="2" onclick="goToSection(this)">Habilidades</a>
+                            </li>
+                            <li>
+                                <a id="3" onclick="goToSection(this)">Educación</a>
+                            </li>
+                            <li>
+                                <a id="4" onclick="goToSection(this)">Proyectos</a>
+                            </li>
+                            <li>
+                                <a id="5" onclick="goToSection(this)">Contacto</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+            <div data-aos="fade-up" class="text-header">
+                <div class="text-title">
+                    <h1>Hola, Soy José Alejandro!</h1>
+                    <p>Tecnólogo en Análisis y Desarrollo de Software</p>
+                    <a id="1" onclick="goToSection(this)" class="btn">Conóceme</a>
+                </div>
+            </div>
+
+        </div>
+
+        <section class="about-me" id="1-section">
+            <div data-aos="fade-up" class="profile-container">
+                <div class="profile-photo">
+                    <img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png" alt="Foto de perfil de José Alejandro Pérez Pabón" width="250" height="250">
+                </div>
+                <h3 data-aos="fade-up">Acerca de mí</h3>
+                <p data-aos="fade-up">
+                    Mi nombre es <strong>José Alejandro Pérez Pabón</strong> y soy <strong>Tecnólogo en Análisis y Desarrollo de Software</strong> formado en el SENA (ADSO) en Bucaramanga. Me apasiona construir soluciones web funcionales y seguir aprendiendo nuevas tecnologías. He desarrollado con <strong>HTML semántico, CSS3, JavaScript, PHP, SQL y Python</strong>, y cuento con principios de <strong>React</strong> para el desarrollo de interfaces modernas.
+                </p>
+                <img data-aos="fade-up" src="https://img.icons8.com/color/200/000000/source-code.png" alt="Código fuente">
+            </div>
+        </section>
+
+        <div class="separator"></div>
+
+        <section class="skills" id="2-section">
+            <div class="skills-container">
+                <h3 data-aos="fade-up">Habilidades</h3>
+                <p data-aos="fade-up">
+                    En esta sección encontrarás mis <strong>habilidades</strong>, tanto personales como técnicas, que aplico en cada proyecto y que hacen de mí un profesional comprometido.
+                </p>
+                <div data-aos="fade-up" class="row skills-card">
+                    <div data-aos="fade-up" class="column col-6 column-separator">
+                        <h4>
+                            Personales
+                        </h4>
+                        <p>
+                            Estas son mis <strong>características personales</strong>, que complementan mi perfil técnico.
+                        </p>
+                        <ul>
+                            <li>
+                                Trabajo en equipo y colaboración.
+                            </li>
+                            <li>
+                                Creatividad para resolver problemas.
+                            </li>
+                            <li>
+                                Proactividad y autonomía.
+                            </li>
+                            <li>
+                                Buena comunicación.
+                            </li>
+                        </ul>
+                    </div>
+                    <div data-aos="fade-up" class="column col-6">
+                        <h4>
+                            Técnicas
+                        </h4>
+                        <p>
+                            Estas son mis <strong>herramientas y tecnologías</strong>, que fortalezco constantemente.
+                        </p>
+                        <ul data-aos="fade-up" class="tech-icons">
+                            <li>
+                                <img src="https://img.icons8.com/color/96/000000/html-5.png" alt="HTML5">
+                                <img src="https://img.icons8.com/color/96/000000/css3.png" alt="CSS3">
+                                <img src="https://img.icons8.com/color/96/000000/javascript.png" alt="JavaScript">
+                            </li>
+                            <li>
+                                <img src="https://img.icons8.com/color/96/000000/php.png" alt="PHP">
+                                <img src="https://img.icons8.com/color/96/000000/sql.png" alt="SQL">
+                                <img src="https://img.icons8.com/color/96/000000/python.png" alt="Python">
+                                <img src="https://img.icons8.com/color/96/000000/react-native.png" alt="React">
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="separator" style="margin-top: 50px"></div>
+
+        <section class="education" id="3-section">
+            <div class="education-container">
+                <h3 data-aos="fade-up">Educación</h3>
+                <p data-aos="fade-up">
+                    Mi formación académica y certificaciones que respaldan mi perfil profesional.
+                </p>
+                <div data-aos="fade-up" class="edu-card">
+                    <h4>Formación principal</h4>
+                    <ul>
+                        <li>
+                            <strong>Tecnólogo en Análisis y Desarrollo de Software (ADSO)</strong> — SENA, Bucaramanga.
+                        </li>
+                    </ul>
+                    <h4>Certificaciones y diplomados</h4>
+                    <ul>
+                        <li>
+                            Diplomado en Innovación en Tecnologías 4.0 — Universidad Nacional de Colombia (Unlab).
+                        </li>
+                        <li>
+                            3 certificados de cursos en tecnologías 4.0 (Unlab).
+                        </li>
+                        <li>
+                            Curso de emprendimiento.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <div class="separator" style="margin-top: 50px"></div>
+
+        <section class="jobs" id="4-section">
+            <div class="jobs-container">
+                <h3 data-aos="fade-up">Mis proyectos</h3>
+                <p data-aos="fade-up">
+                    Mira algunos de mis trabajos, desarrollados con distintas tecnologías web.
+                </p>
+                <div>
+                    <div data-aos="fade-up" class="row">
+
+                        <div class="column col-4">
+
+                            <div class="card-job">
+
+                                <div class="card-img-job">
+                                    <img src="https://images.unsplash.com/photo-1511578194003-00c80e42dc9b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80" alt="Vlover - catálogo de joyería">
+                                </div>
+                                <div data-aos="fade-up" class="card-body">
+                                    <h4>Vlover</h4>
+                                    <p>
+                                        Catálogo de joyería (HTML5 - CSS3 - JavaScript)
+                                    </p>
+                                    <a href="#" class="card-btn">Conocer</a>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="column col-4">
+
+                            <div class="card-job">
+
+                                <div class="card-img-job">
+                                    <img src="https://images.unsplash.com/photo-1484330191673-3354ce741b46?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80" alt="TransferPlayer - gestión de traspasos futbolísticos">
+                                </div>
+                                <div data-aos="fade-up" class="card-body">
+                                    <h4>TransferPlayer</h4>
+                                    <p>
+                                        Prototipo de gestión de traspasos futbolísticos
+                                    </p>
+                                    <a href="#" class="card-btn">Conocer</a>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="column col-4">
+
+                            <div class="card-job">
+
+                                <div class="card-img-job">
+                                    <img src="https://images.unsplash.com/photo-1489875347897-49f64b51c1f8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80" alt="Senda Explorer - turismo">
+                                </div>
+                                <div data-aos="fade-up" class="card-body">
+                                    <h4>Senda Explorer</h4>
+                                    <p>
+                                        Landing de divulgación de turismo
+                                    </p>
+                                    <a href="#" class="card-btn">Conocer</a>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact-me" id="5-section">
+            <div class="contact-me-p">
+                <div class="card-contact-me">
+
+                    <div data-aos="fade-up" class="row">
+                        <div class="column col-6">
+                            <p class="card-start-proyect mg-bt">
+                                ¡Iniciemos un proyecto!
+                            </p>
+                            <a class="card-contact-btn" href="mailto:josealejandroperezpabon24@gmail.com">Contáctame</a>
+                        </div>
+                        <div class="column col-6">
+                            <p class="card-start-proyect-1">
+                                ¿Interesado en trabajar conmigo? Un café y una buena charla pueden dar inicio a un gran proyecto.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div data-aos="fade-up" class="social-networks-container">
+                <div class="network-icons">
+                    <ul class="list-networks">
+                        <li class="icon">
+                            <a class="github" href="https://github.com/alejoxpp" target="_blank" rel="noopener">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </li>
+                        <li class="icon">
+                            <a class="instagram" href="https://instagram.com/4lejo_zxz" target="_blank" rel="noopener">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                        </li>
+                        <li class="icon">
+                            <a class="whatsapp" href="https://wa.me/573162349322" target="_blank" rel="noopener">
+                                <i class="fab fa-whatsapp"></i>
+                            </a>
+                        </li>
+                        <li class="icon">
+                            <a class="email" href="mailto:josealejandroperezpabon24@gmail.com">
+                                <i class="fas fa-envelope"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="credits">
+                    <p>
+                        <script type="text/javascript">
+                            copyright=new Date();
+                            update=copyright.getFullYear();
+                            document.write("Sitio Hecho a Mano - © "+update);
+                        </script>
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- AOS JS -->
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script src="js/script.js"></script>
+    </body>
+</html>
